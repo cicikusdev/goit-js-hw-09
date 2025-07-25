@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ödev 9 - Anasayfa</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #f8f8f8;
+        padding: 40px;
+        text-align: center;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vanilla App Template</title>
-  <link rel="stylesheet" href="./css/styles.css" />
-</head>
+      h1 {
+        margin-bottom: 24px;
+      }
 
-<body>
-  <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+      a {
+        display: inline-block;
+        margin: 10px;
+        padding: 14px 28px;
+        background: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
 
-  <main>
-
-    <load src="./partials/vite-promo.html" />
-    <load src="./partials/badges.html" />
-  </main>
-
-  <load src="./partials/footer.html" />
-
-  <script type="module" src="./main.js"></script>
-</body>
-
+      a:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>-Ödev 9-</h1>
+    <a href="01-gallery.html">📷 Galeri</a>
+    <a href="02-form.html">📨 Geri Bildirim Formu</a>
+  </body>
 </html>

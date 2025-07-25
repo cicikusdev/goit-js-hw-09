@@ -69,32 +69,28 @@ const images = [
   },
 ];
 
-const galeri = document.querySelector('.gallery');
+const galleryEl = document.querySelector(".gallery");
 
-const modalInside = images.map(
-  ({ preview, original, description }) =>
-    `<li class="gallery-item">
-      <a class="gallery-link" href="${original}">
+const markup = images
+  .map(
+    (img) => `
+    <li class="gallery-item">
+      <a class="gallery-link" href="${img.original}">
         <img
           class="gallery-image"
-          src="${preview}"
-          alt="${description}"
+          src="${img.preview}"
+          alt="${img.description}"
         />
       </a>
-    </li>`
-);
+    </li>
+  `
+  )
+  .join("");
 
-const modalInsideBirlesik = modalInside.join('');
-console.log(modalInsideBirlesik);
-galeri.insertAdjacentHTML('beforeend', modalInsideBirlesik);
+galleryEl.innerHTML = markup;
 
-const SLBGaleri = new SimpleLightbox('.gallery a', {
-  animationSlide: true,
+const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
-  captionPosition: 'bottom',
-  loop: false,
-  preloading: true,
-  animationSpeed: 250,
-  fadeSpeed: 250,
   captionDelay: 250,
+  captionPosition: 'bottom',
 });

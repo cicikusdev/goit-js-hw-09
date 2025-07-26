@@ -20,6 +20,10 @@ ul {
   margin: 24px 156px 24px 156px;
 }
 
+li {
+  list-style: none;
+}
+
 .containerr {
   display: flex;
   margin: auto;
